@@ -1,0 +1,6 @@
+{
+  "item.mymoddemo.custom_item": "自定义物品",
+  "block.mymoddemo.custom_block": "自定义方块",
+  "block.mymoddemo.custom_block_2": "自定义方块二",
+  "itemGroup.tutorial_group": "我的资源组"
+}
