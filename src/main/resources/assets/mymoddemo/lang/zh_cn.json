@@ -1,6 +1,10 @@
 {
   "item.mymoddemo.custom_item": "自定义物品",
+  "item.mymoddemo.ice_ether": "冰之以太",
+  "item.mymoddemo.raw_ice_ether": "加工以太",
+  "item.mymoddemo.custom_food_item": "自定义食物",
   "block.mymoddemo.custom_block": "自定义方块",
   "block.mymoddemo.custom_block_2": "自定义方块二",
+  "block.mymoddemo.ice_ether_block": "以太方块",
   "itemGroup.tutorial_group": "我的资源组"
 }

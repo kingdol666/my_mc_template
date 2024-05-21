@@ -14,7 +14,8 @@ import net.minecraft.util.Identifier;
 public class ModBlock {
     public static final Block CUSTOM_BLOCK = registerBlock("custom_block",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE).strength(4.0f)));
-
+    public static final Block ICE_ETHER_BLOCK = registerBlock("ice_ether_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).strength(5.0f)));
     public static final Block CUSTOM_BLOCK_2 = registerBlock("custom_block_2",
             new Block(FabricBlockSettings.copyOf(Blocks.SNOW_BLOCK).strength(3.0f)));
     public static Block registerBlock(String name, Block block){

@@ -1,6 +1,7 @@
 package com.kingdol.mymoddemo;
 
 import com.kingdol.mymoddemo.blobk.ModBlock;
+import com.kingdol.mymoddemo.event.ClickEventBond;
 import com.kingdol.mymoddemo.item.CustomItem;
 import com.kingdol.mymoddemo.item.ModItemGroup;
 import net.fabricmc.api.ModInitializer;
@@ -23,6 +24,7 @@ public class MymodDemo implements ModInitializer {
 		CustomItem.registerCustomItem();
 		ModItemGroup.registeModItemGroup();
 		ModBlock.registerModBlock();
+		ClickEventBond.registerEvents();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

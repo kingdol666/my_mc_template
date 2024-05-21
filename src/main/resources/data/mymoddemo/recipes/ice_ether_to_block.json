@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mymoddemo:ice_ether"
+    }
+  },
+  "result": {
+    "item": "mymoddemo:ice_ether_block"
+  }
+}
