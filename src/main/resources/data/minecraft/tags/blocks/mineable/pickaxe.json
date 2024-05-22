@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mymoddemo:ice_ether_block",
+    "mymoddemo:raw_ice_ether_block",
+    "mymoddemo:ice_ether_block_ore"
+  ]
+}

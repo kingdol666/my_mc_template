@@ -1,9 +1,9 @@
 package com.kingdol.mymoddemo;
 
-import com.kingdol.mymoddemo.blobk.ModBlock;
+import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
 import com.kingdol.mymoddemo.event.ClickEventBond;
-import com.kingdol.mymoddemo.item.CustomItem;
-import com.kingdol.mymoddemo.item.ModItemGroup;
+import com.kingdol.mymoddemo.item.RegistItems;
+import com.kingdol.mymoddemo.group.ModItemGroup;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -21,9 +21,9 @@ public class MymodDemo implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		CustomItem.registerCustomItem();
+		RegistItems.registerCustomItem();
 		ModItemGroup.registeModItemGroup();
-		ModBlock.registerModBlock();
+		RegistCustomBlocks.registerModBlock();
 		ClickEventBond.registerEvents();
 		LOGGER.info("Hello Fabric world!");
 	}

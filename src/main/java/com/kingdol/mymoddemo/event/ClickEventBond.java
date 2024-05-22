@@ -6,7 +6,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.TypedActionResult;
 
-import static com.kingdol.mymoddemo.item.CustomItem.CUSTOM_ITEM;
+import static com.kingdol.mymoddemo.item.RegistItems.CUSTOM_ITEM;
 
 
 public class ClickEventBond {
