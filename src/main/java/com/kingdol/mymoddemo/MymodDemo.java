@@ -4,8 +4,10 @@ import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
 import com.kingdol.mymoddemo.event.ClickEventBond;
 import com.kingdol.mymoddemo.item.RegistItems;
 import com.kingdol.mymoddemo.group.ModItemGroup;
+import com.kingdol.mymoddemo.item.customitems.CustomFuel;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +27,7 @@ public class MymodDemo implements ModInitializer {
 		ModItemGroup.registeModItemGroup();
 		RegistCustomBlocks.registerModBlock();
 		ClickEventBond.registerEvents();
+		FuelRegistry.INSTANCE.add(CustomFuel.FUEL_OIL, 200);
 		LOGGER.info("Hello Fabric world!");
 	}
 }

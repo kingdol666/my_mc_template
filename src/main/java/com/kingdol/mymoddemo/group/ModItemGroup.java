@@ -3,7 +3,9 @@ package com.kingdol.mymoddemo.group;
 import com.kingdol.mymoddemo.MymodDemo;
 import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
 import com.kingdol.mymoddemo.item.RegistItems;
+import com.kingdol.mymoddemo.item.customitems.CustomFuel;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -25,6 +27,9 @@ public class ModItemGroup {
                         entries.add(RegistCustomBlocks.CUSTOM_BLOCK_2);
                         entries.add(RegistCustomBlocks.ICE_ETHER_BLOCK);
                         entries.add(RegistCustomBlocks.RAW_ICE_ETHER_BLOCK);
+                        entries.add(RegistItems.CUSTOM_ENCHANTED_ITEM);
+                        entries.add(CustomFuel.FUEL_OIL);
+                        entries.add(RegistItems.PROSPECTOR_ITEM);
                     })).build());
 
     public static void registeModItemGroup() {
