@@ -1,10 +1,11 @@
 package com.kingdol.mymoddemo;
 
 import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
-import com.kingdol.mymoddemo.event.ClickEventBond;
+import com.kingdol.mymoddemo.event.RegisterEvent;
 import com.kingdol.mymoddemo.item.RegistItems;
 import com.kingdol.mymoddemo.group.ModItemGroup;
 import com.kingdol.mymoddemo.item.customitems.CustomFuel;
+import com.kingdol.mymoddemo.particle.ParticleMod;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -26,7 +27,8 @@ public class MymodDemo implements ModInitializer {
 		RegistItems.registerCustomItem();
 		ModItemGroup.registeModItemGroup();
 		RegistCustomBlocks.registerModBlock();
-		ClickEventBond.registerEvents();
+		RegisterEvent.registerEvents();
+		ParticleMod.registerParticle();
 		FuelRegistry.INSTANCE.add(CustomFuel.FUEL_OIL, 200);
 		LOGGER.info("Hello Fabric world!");
 	}

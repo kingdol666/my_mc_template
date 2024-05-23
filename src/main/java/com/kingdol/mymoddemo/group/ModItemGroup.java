@@ -27,6 +27,7 @@ public class ModItemGroup {
                         entries.add(RegistCustomBlocks.CUSTOM_BLOCK_2);
                         entries.add(RegistCustomBlocks.ICE_ETHER_BLOCK);
                         entries.add(RegistCustomBlocks.RAW_ICE_ETHER_BLOCK);
+                        entries.add(RegistCustomBlocks.ICE_ETHER_BLOCK_ORE);
                         entries.add(RegistItems.CUSTOM_ENCHANTED_ITEM);
                         entries.add(CustomFuel.FUEL_OIL);
                         entries.add(RegistItems.PROSPECTOR_ITEM);

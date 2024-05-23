@@ -4,6 +4,7 @@ import com.kingdol.mymoddemo.MymodDemo;
 import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
 import com.kingdol.mymoddemo.food.CustomFood;
 import com.kingdol.mymoddemo.item.customitems.CustomEnchantedItem;
+import com.kingdol.mymoddemo.item.customitems.CustomFuel;
 import com.kingdol.mymoddemo.item.customitems.Prospector;
 import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -66,7 +67,6 @@ public class RegistItems {
         entries.add(ICE_ETHER);
         entries.add(RAW_ICE_ETHER);
     }
-
     public static final Item PROSPECTOR_ITEM = registerItem("prospector_item", new Prospector(new Item.Settings()));
     public static void addItemToBuilding(FabricItemGroupEntries entries){
         entries.add(RegistCustomBlocks.ICE_ETHER_BLOCK);

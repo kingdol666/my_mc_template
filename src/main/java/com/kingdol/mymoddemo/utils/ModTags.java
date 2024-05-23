@@ -18,6 +18,10 @@ public class ModTags {
         }
     }
     public class Items{
-
+        public static TagKey<Item> CUSTOM_ITEM_TAG = registBlockTag("custom_item_list");
+        public static TagKey<Item> registBlockTag(String name)
+        {
+            return TagKey.of(RegistryKeys.ITEM, new Identifier(MymodDemo.MOD_ID, name));
+        }
     }
 }

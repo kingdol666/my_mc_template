@@ -1,0 +1,6 @@
+// 1.20.4	2024-05-23T13:00:11.7152753	mymodDemo/Block Loot Tables
+dc527379d70020ee37b3d080d40453a9a644ed10 data\mymoddemo\loot_tables\blocks\ice_ether_block_ore.json
+ad308ee949cdf559b9f64b3b1d56f681a71ed24d data\mymoddemo\loot_tables\blocks\raw_ice_ether_block.json
+c683f4f1aab691d61bf2e87892c1e087413b5957 data\mymoddemo\loot_tables\blocks\custom_block.json
+259d58e3c08692bd4150788d56bba0d4b3c9350a data\mymoddemo\loot_tables\blocks\ice_ether_block.json
+9bde9fe0f241e1aa2b963b4a896f2db41d2c845c data\mymoddemo\loot_tables\blocks\custom_block_2.json

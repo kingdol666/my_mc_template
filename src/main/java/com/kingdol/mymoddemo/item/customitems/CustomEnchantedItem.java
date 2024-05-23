@@ -1,10 +1,13 @@
 package com.kingdol.mymoddemo.item.customitems;
 
+import com.kingdol.mymoddemo.particle.ParticleMod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -36,10 +39,28 @@ public class CustomEnchantedItem extends Item {
     public void onItemEntityDestroyed(ItemEntity entity) {
         super.onItemEntityDestroyed(entity);
     }
+    private void spawnParticles(World world, PlayerEntity entity) {
+        double x = entity.getX();
+        double y = entity.getY() + 1.5;  // 粒子在实体头部上方一点
+        double z = entity.getZ();
+
+        for (int i = 0; i < 10; i++) {  // 生成多个粒子
+            double offsetX = (world.random.nextDouble() - 0.5) * 0.5;
+            double offsetY = (world.random.nextDouble() - 0.5) * 0.5;
+            double offsetZ = (world.random.nextDouble() - 0.5) * 0.5;
+
+            double speedX = (world.random.nextDouble() - 0.5) * 0.1;
+            double speedY = (world.random.nextDouble() - 0.5) * 0.1;
+            double speedZ = (world.random.nextDouble() - 0.5) * 0.1;
+
+            world.addParticle(ParticleMod.CUSTOM_PARTICLE, x + offsetX, y + offsetY, z + offsetZ, speedX, speedY, speedZ);
+        }
+    }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
+        spawnParticles(world, user);
         if (!world.isClient) {
             Random random = new Random();
             // 创建一个包含有益附魔的列表
