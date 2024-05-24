@@ -1,6 +1,7 @@
 package com.kingdol.mymoddemo.datagen;
 
 import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
+import com.kingdol.mymoddemo.blobk.iceether.IceEtherBuildings;
 import com.kingdol.mymoddemo.utils.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -44,5 +45,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
                 .add(RegistCustomBlocks.CUSTOM_BLOCK_2);
+        getOrCreateTagBuilder(BlockTags.BUTTONS)
+                .add(IceEtherBuildings.ICE_ETHER_BUTTON);
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(IceEtherBuildings.ICE_ETHER_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(IceEtherBuildings.ICE_ETHER_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(IceEtherBuildings.ICE_ETHER_WALL);
     }
 }

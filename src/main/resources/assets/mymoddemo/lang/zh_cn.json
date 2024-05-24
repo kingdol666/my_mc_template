@@ -6,11 +6,28 @@
   "item.mymoddemo.prospector_item": "矿石探测器",
   "item.mymoddemo.custom_food_item": "自定义食物",
   "item.mymoddemo.custom_fuel": "石油",
+
+  "item.mymoddemo.fire_ether_pickaxe": "火之镐",
+  "item.mymoddemo.fire_ether_axe": "火之斧",
+  "item.mymoddemo.fire_ether_shovel": "火之铲",
+  "item.mymoddemo.fire_ether_sword": "火之剑",
+  "item.mymoddemo.fire_ether_hoe": "火之锄",
+  "item.mymoddemo.fire_ether": "火之以太",
+
   "block.mymoddemo.custom_block": "自定义方块",
   "block.mymoddemo.prospector_item": "自定义方块",
   "block.mymoddemo.custom_block_2": "自定义方块二",
   "block.mymoddemo.ice_ether_block": "冰之以太方块",
   "block.mymoddemo.raw_ice_ether_block": "原以太方块",
   "block.mymoddemo.ice_ether_block_ore": "以太原矿",
+  "block.mymoddemo.ice_ether_stair": "以太楼梯",
+  "block.mymoddemo.ice_ether_slab": "以太小砖",
+  "block.mymoddemo.ice_ether_button": "以太按钮",
+  "block.mymoddemo.ice_ether_pressure_plate": "以太指压板",
+  "block.mymoddemo.ice_ether_fence": "以太篱笆",
+  "block.mymoddemo.ice_ether_fence_gate": "以太栅栏门",
+  "block.mymoddemo.ice_ether_wall": "以太墙",
+  "block.mymoddemo.ice_ether_door": "以太门",
+  "block.mymoddemo.ice_ether_trapdoor": "以太天窗",
   "itemGroup.tutorial_group": "我的资源组"
 }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mymoddemo:fire_ether"
+    },
+    "A": {
+      "item": "minecraft:coal"
+    }
+  },
+  "pattern": [
+    "##A"
+  ],
+  "result": {
+    "item": "mymoddemo:custom_fuel"
+  }
+}
