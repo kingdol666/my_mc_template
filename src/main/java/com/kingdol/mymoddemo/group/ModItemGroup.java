@@ -49,6 +49,8 @@ public class ModItemGroup {
                         entries.add(RegistItems.FIRE_ETHER_SHOVEL);
                         entries.add(RegistItems.FIRE_ETHER_HOE);
                         entries.add(RegistItems.FIRE_ETHER_SWORD);
+
+                        entries.add(RegistItems.CUSTOM_GUI_ITEM);
                     })).build());
 
     public static void registeModItemGroup() {

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "mymoddemo:fire_ether"
+    }
+  },
+  "pattern": [
+    "AAA",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "mymoddemo:fire_ether_pickaxe"
+  }
+}

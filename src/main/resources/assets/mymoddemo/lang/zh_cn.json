@@ -1,12 +1,13 @@
 {
   "item.mymoddemo.custom_item": "自定义物品",
   "item.mymoddemo.ice_ether": "冰之以太",
+  "item.mymoddemo.fire_ether": "火之以太",
   "item.mymoddemo.custom_enchanted_item": "附魔之丈",
   "item.mymoddemo.raw_ice_ether": "原始以太",
   "item.mymoddemo.prospector_item": "矿石探测器",
   "item.mymoddemo.custom_food_item": "自定义食物",
   "item.mymoddemo.custom_fuel": "石油",
-
+  "item.mymoddemo.fire_ether.tooltip": "他会让你燃烧",
   "item.mymoddemo.fire_ether_pickaxe": "火之镐",
   "item.mymoddemo.fire_ether_axe": "火之斧",
   "item.mymoddemo.fire_ether_shovel": "火之铲",

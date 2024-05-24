@@ -1,0 +1,63 @@
+{
+  "criteria": {
+    "has_crafting_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crafting_table"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fire_ether": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mymoddemo:fire_ether"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.mymoddemo.recipes.tools.fire_ether_to_sword.description"
+    },
+    "icon": {
+      "item": "minecraft:crafting_table"
+    },
+    "title": {
+      "translate": "advancements.mymoddemo.recipes.tools.fire_ether_to_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_crafting_table"
+    ],
+    [
+      "has_fire_ether"
+    ],
+    [
+      "has_stick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

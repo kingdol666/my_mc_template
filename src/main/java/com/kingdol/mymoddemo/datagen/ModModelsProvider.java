@@ -49,6 +49,7 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(RegistItems.CUSTOM_FOOD_ITEM, Models.GENERATED);
         itemModelGenerator.register(CustomFuel.FUEL_OIL, Models.GENERATED);
         itemModelGenerator.register(RegistItems.FIRE_ETHER,Models.GENERATED);
+        itemModelGenerator.register(RegistItems.CUSTOM_GUI_ITEM,Models.GENERATED);
 
         itemModelGenerator.register(RegistItems.FIRE_ETHER_PICKAXE,Models.HANDHELD);
         itemModelGenerator.register(RegistItems.FIRE_ETHER_AXE,Models.HANDHELD);

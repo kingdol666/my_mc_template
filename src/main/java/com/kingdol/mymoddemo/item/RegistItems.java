@@ -4,10 +4,7 @@ import com.kingdol.mymoddemo.MymodDemo;
 import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
 import com.kingdol.mymoddemo.blobk.iceether.IceEtherBuildings;
 import com.kingdol.mymoddemo.food.CustomFood;
-import com.kingdol.mymoddemo.item.customitems.CustomEnchantedItem;
-import com.kingdol.mymoddemo.item.customitems.CustomFuel;
-import com.kingdol.mymoddemo.item.customitems.FireEther;
-import com.kingdol.mymoddemo.item.customitems.Prospector;
+import com.kingdol.mymoddemo.item.customitems.*;
 import com.kingdol.mymoddemo.item.utils.Classify;
 import com.kingdol.mymoddemo.item.utils.ModToolMaterial;
 import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
@@ -78,6 +75,9 @@ public class RegistItems {
             new SwordItem(ModToolMaterial.FIRE_ETHER, 5, 3f, new FabricItemSettings()));
     public static final Item FIRE_ETHER_HOE = registerItem("fire_ether_hoe",
             new HoeItem(ModToolMaterial.FIRE_ETHER, 0, 0f, new FabricItemSettings()));
+
+    public static final Item CUSTOM_GUI_ITEM = registerItem("custom_gui_item",
+            new CustomGuiItem(new FabricItemSettings().maxCount(1)));
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MymodDemo.MOD_ID, name), item);

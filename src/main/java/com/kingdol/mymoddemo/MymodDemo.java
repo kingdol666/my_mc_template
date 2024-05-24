@@ -30,7 +30,6 @@ public class MymodDemo implements ModInitializer {
 		RegistCustomBlocks.registerModBlock();
 		RegisterEvent.registerEvents();
 		ParticleMod.registerParticle();
-		DropEvent.Init();
 		FuelRegistry.INSTANCE.add(CustomFuel.FUEL_OIL, 200);
 		LOGGER.info("Hello Fabric world!");
 	}

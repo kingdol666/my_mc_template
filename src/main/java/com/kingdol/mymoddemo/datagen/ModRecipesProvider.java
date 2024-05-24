@@ -6,6 +6,7 @@ import com.kingdol.mymoddemo.item.RegistItems;
 import com.kingdol.mymoddemo.item.customitems.CustomFuel;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -49,5 +50,55 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .criterion(hasItem(RegistItems.FIRE_ETHER), conditionsFromItem(RegistItems.FIRE_ETHER))
                 .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
                 .offerTo(exporter, new Identifier("ether_to_fuel"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, RegistItems.FIRE_ETHER_SWORD, 1)
+                .pattern("A")
+                .pattern("A")
+                .pattern("#")
+                .input('A', RegistItems.FIRE_ETHER)
+                .input('#', Items.STICK)
+                .criterion(hasItem(RegistItems.FIRE_ETHER), conditionsFromItem(RegistItems.FIRE_ETHER))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier("fire_ether_to_sword"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, RegistItems.FIRE_ETHER_PICKAXE, 1)
+                .pattern("AAA")
+                .pattern(" # ")
+                .pattern(" # ")
+                .input('A', RegistItems.FIRE_ETHER)
+                .input('#', Items.STICK)
+                .criterion(hasItem(RegistItems.FIRE_ETHER), conditionsFromItem(RegistItems.FIRE_ETHER))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier("fire_ether_to_pickaxe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, RegistItems.FIRE_ETHER_AXE, 1)
+                .pattern(" AA")
+                .pattern(" #A")
+                .pattern(" # ")
+                .input('A', RegistItems.FIRE_ETHER)
+                .input('#', Items.STICK)
+                .criterion("has_fire_ether", InventoryChangedCriterion.Conditions.items(RegistItems.FIRE_ETHER))
+                .criterion("has_stick", InventoryChangedCriterion.Conditions.items(Items.STICK))
+                .offerTo(exporter, new Identifier("fire_ether_to_axe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, RegistItems.FIRE_ETHER_SHOVEL, 1)
+                .pattern("A")
+                .pattern("#")
+                .pattern("#")
+                .input('A', RegistItems.FIRE_ETHER)
+                .input('#', Items.STICK)
+                .criterion("has_fire_ether", InventoryChangedCriterion.Conditions.items(RegistItems.FIRE_ETHER))
+                .criterion("has_stick", InventoryChangedCriterion.Conditions.items(Items.STICK))
+                .offerTo(exporter, new Identifier("fire_ether_to_shovel"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, RegistItems.FIRE_ETHER_HOE, 1)
+                .pattern(" AA")
+                .pattern(" # ")
+                .pattern(" # ")
+                .input('A', RegistItems.FIRE_ETHER)
+                .input('#', Items.STICK)
+                .criterion("has_fire_ether", InventoryChangedCriterion.Conditions.items(RegistItems.FIRE_ETHER))
+                .criterion("has_stick", InventoryChangedCriterion.Conditions.items(Items.STICK))
+                .offerTo(exporter, new Identifier("fire_ether_to_hoe"));
     }
 }
