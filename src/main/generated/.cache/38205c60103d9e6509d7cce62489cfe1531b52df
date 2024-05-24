@@ -1,6 +1,15 @@
-// 1.20.4	2024-05-23T13:00:11.7152753	mymodDemo/Block Loot Tables
+// 1.20.4	2024-05-24T09:53:02.9086557	mymodDemo/Block Loot Tables
 dc527379d70020ee37b3d080d40453a9a644ed10 data\mymoddemo\loot_tables\blocks\ice_ether_block_ore.json
-ad308ee949cdf559b9f64b3b1d56f681a71ed24d data\mymoddemo\loot_tables\blocks\raw_ice_ether_block.json
+cc65f33b3b7dcbd84652b21cb286e8d76ac70054 data\mymoddemo\loot_tables\blocks\ice_ether_slab.json
+c140a0da1849acd117dd9ca64fa502257ef9d694 data\mymoddemo\loot_tables\blocks\ice_ether_trapdoor.json
 c683f4f1aab691d61bf2e87892c1e087413b5957 data\mymoddemo\loot_tables\blocks\custom_block.json
+041836052cee4a086091030c6172503a40a6f171 data\mymoddemo\loot_tables\blocks\ice_ether_fence.json
+0bdd10af41a2fc6d7a18b569c533791aebaf7412 data\mymoddemo\loot_tables\blocks\ice_ether_stair.json
+137bb1bdc135fa7fe8282145eb6f81120465a930 data\mymoddemo\loot_tables\blocks\ice_ether_button.json
+6eb24e1803dc5fe057521d3e50f9366942c5f83d data\mymoddemo\loot_tables\blocks\ice_ether_door.json
+ad308ee949cdf559b9f64b3b1d56f681a71ed24d data\mymoddemo\loot_tables\blocks\raw_ice_ether_block.json
+8579fd96eb0344b1871094ab98f99b7d2ba3269a data\mymoddemo\loot_tables\blocks\ice_ether_fence_gate.json
+ad2835dd1068a3f4d80c6bf2396d931b2cd2e69a data\mymoddemo\loot_tables\blocks\ice_ether_wall.json
+ab339687ec8eeefd8277f80d01a99c89bb51d441 data\mymoddemo\loot_tables\blocks\ice_ether_pressure_plate.json
 259d58e3c08692bd4150788d56bba0d4b3c9350a data\mymoddemo\loot_tables\blocks\ice_ether_block.json
 9bde9fe0f241e1aa2b963b4a896f2db41d2c845c data\mymoddemo\loot_tables\blocks\custom_block_2.json

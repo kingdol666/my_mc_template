@@ -1,6 +1,10 @@
-// 1.20.4	2024-05-23T13:00:11.7182826	mymodDemo/Tags for minecraft:block
+// 1.20.4	2024-05-24T09:53:02.9113262	mymodDemo/Tags for minecraft:block
 8348a40b8c7afffd11a2686d8e4bc240c8b197a7 data\mymoddemo\tags\blocks\prospect_list.json
+4e84a283fd8d140cb92f3033822bdf655c609ade data\minecraft\tags\blocks\walls.json
+9c8b68310974819da1b5622e4ece12204e199293 data\minecraft\tags\blocks\buttons.json
+5fdac01a2ca656b1ee8d89a04c06bba4bffe1b28 data\minecraft\tags\blocks\fences.json
 4b79f5c56e0b19320116924bcf1918749cb89adc data\fabric\tags\blocks\needs_tool_level_4.json
 f614b6a373c2239850f98a1ccdfde32ac4fd4931 data\minecraft\tags\blocks\needs_iron_tool.json
+6cd2379b1cb30e45fca38389b979ac1614052c75 data\minecraft\tags\blocks\fence_gates.json
 74c9b0bc2beba2d43c32b9853b573e11d767620b data\minecraft\tags\blocks\needs_diamond_tool.json
 0899ccf0ec8c97393a9081f491c1e7d23c95db2d data\minecraft\tags\blocks\mineable\pickaxe.json

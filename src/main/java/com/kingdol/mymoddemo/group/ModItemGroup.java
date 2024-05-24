@@ -2,6 +2,7 @@ package com.kingdol.mymoddemo.group;
 
 import com.kingdol.mymoddemo.MymodDemo;
 import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
+import com.kingdol.mymoddemo.blobk.iceether.IceEtherBuildings;
 import com.kingdol.mymoddemo.item.RegistItems;
 import com.kingdol.mymoddemo.item.customitems.CustomFuel;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -22,6 +23,7 @@ public class ModItemGroup {
                         entries.add(RegistItems.CUSTOM_ITEM);
                         entries.add(RegistItems.CUSTOM_FOOD_ITEM);
                         entries.add(RegistItems.ICE_ETHER);
+                        entries.add(RegistItems.FIRE_ETHER);
                         entries.add(RegistItems.RAW_ICE_ETHER);
                         entries.add(RegistCustomBlocks.CUSTOM_BLOCK);
                         entries.add(RegistCustomBlocks.CUSTOM_BLOCK_2);
@@ -31,6 +33,22 @@ public class ModItemGroup {
                         entries.add(RegistItems.CUSTOM_ENCHANTED_ITEM);
                         entries.add(CustomFuel.FUEL_OIL);
                         entries.add(RegistItems.PROSPECTOR_ITEM);
+
+                        entries.add(IceEtherBuildings.ICE_ETHER_BUTTON);
+                        entries.add(IceEtherBuildings.ICE_ETHER_DOOR);
+                        entries.add(IceEtherBuildings.ICE_ETHER_FENCE);
+                        entries.add(IceEtherBuildings.ICE_ETHER_FENCE_GATE);
+                        entries.add(IceEtherBuildings.ICE_ETHER_STAIR);
+                        entries.add(IceEtherBuildings.ICE_ETHER_SLAB);
+                        entries.add(IceEtherBuildings.ICE_ETHER_PRESSURE_PLATE);
+                        entries.add(IceEtherBuildings.ICE_ETHER_WALL);
+                        entries.add(IceEtherBuildings.ICE_ETHER_TRAPDOOR);
+
+                        entries.add(RegistItems.FIRE_ETHER_PICKAXE);
+                        entries.add(RegistItems.FIRE_ETHER_AXE);
+                        entries.add(RegistItems.FIRE_ETHER_SHOVEL);
+                        entries.add(RegistItems.FIRE_ETHER_HOE);
+                        entries.add(RegistItems.FIRE_ETHER_SWORD);
                     })).build());
 
     public static void registeModItemGroup() {

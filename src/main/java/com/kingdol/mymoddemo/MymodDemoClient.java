@@ -1,5 +1,6 @@
 package com.kingdol.mymoddemo;
 
+import com.kingdol.mymoddemo.blobk.iceether.IceEtherBuildings;
 import com.kingdol.mymoddemo.particle.ParticleMod;
 import com.kingdol.mymoddemo.particle.instance.CustomParticle;
 import net.fabricmc.api.ClientModInitializer;
@@ -21,5 +22,7 @@ public class MymodDemoClient implements ClientModInitializer {
         LOGGER.info("Hello "+ MymodDemo.MOD_ID);
         ParticleFactoryRegistry.getInstance().register(GREEN_FLAME, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ParticleMod.CUSTOM_PARTICLE, CustomParticle.CustomParticleFactory::new);
+
+        IceEtherBuildings.ClientInit();
     }
 }

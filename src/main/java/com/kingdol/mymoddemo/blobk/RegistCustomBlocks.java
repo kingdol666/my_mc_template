@@ -1,6 +1,7 @@
 package com.kingdol.mymoddemo.blobk;
 
 import com.kingdol.mymoddemo.MymodDemo;
+import com.kingdol.mymoddemo.blobk.iceether.IceEtherBuildings;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -38,6 +39,6 @@ public class RegistCustomBlocks {
     }
     public static void registerModBlock()
     {
-
+        IceEtherBuildings.registerIceEtherBuildings();
     }
 }

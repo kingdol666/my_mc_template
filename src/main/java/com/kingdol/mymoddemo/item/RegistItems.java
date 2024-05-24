@@ -2,10 +2,14 @@ package com.kingdol.mymoddemo.item;
 
 import com.kingdol.mymoddemo.MymodDemo;
 import com.kingdol.mymoddemo.blobk.RegistCustomBlocks;
+import com.kingdol.mymoddemo.blobk.iceether.IceEtherBuildings;
 import com.kingdol.mymoddemo.food.CustomFood;
 import com.kingdol.mymoddemo.item.customitems.CustomEnchantedItem;
 import com.kingdol.mymoddemo.item.customitems.CustomFuel;
+import com.kingdol.mymoddemo.item.customitems.FireEther;
 import com.kingdol.mymoddemo.item.customitems.Prospector;
+import com.kingdol.mymoddemo.item.utils.Classify;
+import com.kingdol.mymoddemo.item.utils.ModToolMaterial;
 import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -14,9 +18,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageType;
 import net.minecraft.entity.damage.DamageTypes;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -32,6 +34,7 @@ public class RegistItems {
             new Item(new Item.Settings().food(CustomFood.CUSTOM_FOOD).maxCount(16)));
     public static final Item ICE_ETHER = registerItem("ice_ether", new Item(new Item.Settings()));
     public static final Item RAW_ICE_ETHER = registerItem("raw_ice_ether", new Item(new Item.Settings()));
+    public static final Item FIRE_ETHER = registerItem("fire_ether", new FireEther(new FabricItemSettings().maxDamage(128)));
     public static final Item CUSTOM_ENCHANTED_ITEM = registerItem("custom_enchanted_item",
             new CustomEnchantedItem(new FabricItemSettings().customDamage(new CustomDamageHandler() {
                 @Override
@@ -62,42 +65,31 @@ public class RegistItems {
                 }
             }).maxDamageIfAbsent(30).rarity(Rarity.UNCOMMON)));
 
-        public static void addItemToIngredients(FabricItemGroupEntries entries){
-        entries.add(CUSTOM_ITEM);
-        entries.add(ICE_ETHER);
-        entries.add(RAW_ICE_ETHER);
-    }
+
     public static final Item PROSPECTOR_ITEM = registerItem("prospector_item", new Prospector(new Item.Settings()));
-    public static void addItemToBuilding(FabricItemGroupEntries entries){
-        entries.add(RegistCustomBlocks.ICE_ETHER_BLOCK);
-        entries.add(RegistCustomBlocks.CUSTOM_BLOCK_2);
-        entries.add(RegistCustomBlocks.RAW_ICE_ETHER_BLOCK);
-    }
-    public static void addItemToFood(FabricItemGroupEntries entries){
-        entries.add(CUSTOM_FOOD_ITEM);
-    }
-    public static Item registerItem(String name, Item item){
+
+    public static final Item FIRE_ETHER_PICKAXE = registerItem("fire_ether_pickaxe",
+            new PickaxeItem(ModToolMaterial.FIRE_ETHER, 2, 2f, new FabricItemSettings()));
+    public static final Item FIRE_ETHER_AXE = registerItem("fire_ether_axe",
+            new AxeItem(ModToolMaterial.FIRE_ETHER, 3, 1f, new FabricItemSettings()));
+    public static final Item FIRE_ETHER_SHOVEL = registerItem("fire_ether_shovel",
+            new ShovelItem(ModToolMaterial.FIRE_ETHER, 0, 0f, new FabricItemSettings()));
+    public static final Item FIRE_ETHER_SWORD = registerItem("fire_ether_sword",
+            new SwordItem(ModToolMaterial.FIRE_ETHER, 5, 3f, new FabricItemSettings()));
+    public static final Item FIRE_ETHER_HOE = registerItem("fire_ether_hoe",
+            new HoeItem(ModToolMaterial.FIRE_ETHER, 0, 0f, new FabricItemSettings()));
+
+    public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MymodDemo.MOD_ID, name), item);
     }
-    public static void registerCustomItem(){
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(RegistItems::addItemToIngredients);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(RegistItems::addItemToFood);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(RegistItems::addItemToBuilding);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(RegistItems::addItemToColoredBlocks);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(RegistItems::addItemToCombat);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(RegistItems::addItemToFunctional);
-    }
 
-    private static void addItemToFunctional(FabricItemGroupEntries entries) {
-        entries.add(CUSTOM_ENCHANTED_ITEM);
-        entries.add(PROSPECTOR_ITEM);
-    }
 
-    private static void addItemToCombat(FabricItemGroupEntries entries) {
-        entries.add(RegistCustomBlocks.ICE_ETHER_BLOCK_ORE);
-    }
-
-    private static void addItemToColoredBlocks(FabricItemGroupEntries entries) {
-
+    public static void registerCustomItem() {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(Classify::addItemToIngredients);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(Classify::addItemToFood);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(Classify::addItemToBuilding);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(Classify::addItemToNATURAL);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(Classify::addItemToCombat);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(Classify::addItemToTools);
     }
 }
